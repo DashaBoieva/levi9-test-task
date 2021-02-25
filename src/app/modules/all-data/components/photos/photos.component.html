@@ -1,0 +1,6 @@
+<h1>Photos</h1>
+<div class="row">
+  <div *ngFor="let photoItem of photos" class="col">
+    <app-photo-card [photoData]="photoItem"></app-photo-card>
+  </div>
+</div>

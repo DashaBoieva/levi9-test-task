@@ -1,0 +1,35 @@
+mat-toolbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+
+  a {
+    margin-left: 30px;
+  }
+
+  img {
+    margin: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  margin: 20px auto 32px;
+  padding: 0;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+  span {
+    display: none;
+  }
+
+  mat-toolbar {
+    a {
+      margin-left: 5px;
+    }
+  }
+}

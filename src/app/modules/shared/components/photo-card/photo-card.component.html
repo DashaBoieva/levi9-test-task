@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-content>
+    <img src="{{ photoData.url }}" alt="Photo of a Shiba Inu" />
+    <div>Photo number {{ photoData.id }}</div>
+    <div>{{ photoData.title }}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      [ngClass]="{ 'activated-button': activated }"
+      (click)="activate(photoData)"
+      mat-raised-button
+      color="primary"
+    >
+      {{ activated ? "Deactivate" : "Active" }}
+    </button>
+  </mat-card-actions>
+</mat-card>

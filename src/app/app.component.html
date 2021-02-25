@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <img width="40" alt="Levi9 Logo" src="../assets/levi9-logo.png" />
+  <span>Levi9 Test Task</span>
+  <a mat-raised-button [routerLink]="['/all']">Home</a>
+  <a mat-raised-button [routerLink]="['/activated']">Activated items</a>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

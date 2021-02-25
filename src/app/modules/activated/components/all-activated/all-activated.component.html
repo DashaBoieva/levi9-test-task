@@ -1,0 +1,36 @@
+<div
+  class="all-activated"
+  *ngIf="
+    activatedUsers.length > 0 ||
+      activatedPosts.length > 0 ||
+      activatedPhotos.length > 0;
+    else noActivated
+  "
+>
+  <section *ngIf="activatedUsers.length > 0">
+    <h1>Activated users</h1>
+    <div class="row">
+      <div *ngFor="let userItem of activatedUsers" class="col">
+        <app-user-card [userData]="userItem"></app-user-card>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="activatedPosts.length > 0">
+    <h1>Activated posts</h1>
+
+    <div *ngFor="let postItem of activatedPosts">
+      <app-post-card [postData]="postItem"></app-post-card>
+    </div>
+  </section>
+
+  <section *ngIf="activatedPhotos.length > 0">
+    <h1>Activated photos</h1>
+    <div class="row">
+      <div *ngFor="let photoItem of activatedPhotos" class="col">
+        <app-photo-card [photoData]="photoItem"></app-photo-card>
+      </div>
+    </div>
+  </section>
+</div>
+<ng-template #noActivated> <h1>There are no activated items</h1></ng-template>

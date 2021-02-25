@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ userData.name }}</mat-card-title>
+    <mat-card-subtitle> {{ userData.email }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p><span>Username:</span> {{ userData.username }}</p>
+    <p><span>ID:</span> {{ userData.id }}</p>
+    <p>
+      <span>Address:</span> {{ userData.address.street }},
+      {{ userData.address.suite }} {{ userData.address.city }},
+      {{ userData.address.zipcode }}, {{ userData.address.geo.lat }},
+      {{ userData.address.geo.lng }}
+    </p>
+    <p><span>Phone:</span> {{ userData.phone }}</p>
+    <p><span>Website: </span>{{ userData.website }}</p>
+    <p>
+      <span>Company:</span>{{ userData.company.name }},
+      {{ userData.company.catchPhrase }},
+      {{ userData.company.bs }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      [ngClass]="{ 'activated-button': activated }"
+      (click)="activate(userData)"
+      mat-raised-button
+      color="primary"
+    >
+      {{ activated ? "Deactivate" : "Active" }}
+    </button>
+  </mat-card-actions>
+</mat-card>

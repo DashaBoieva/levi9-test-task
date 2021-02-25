@@ -1,0 +1,21 @@
+.activated-button {
+  background-color: #9e9e9e;
+}
+
+mat-card {
+  padding: 0px;
+
+  mat-card-header {
+    background-color: #01579b;
+    padding-top: 10px;
+    color: #fff;
+
+    mat-card-subtitle {
+      color: #fff;
+    }
+  }
+
+  mat-card-content {
+    padding: 16px;
+  }
+}
